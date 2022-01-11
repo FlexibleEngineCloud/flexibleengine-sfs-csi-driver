@@ -1,4 +1,4 @@
-module github.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver
+module github.com/Hasardine/flexibleengine-sfs-csi-driver
 
 go 1.12
 

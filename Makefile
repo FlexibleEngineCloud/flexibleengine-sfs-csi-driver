@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PKG=github.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver
+PKG=github.com/Hasardine/flexibleengine-sfs-csi-driver
 
 GO111MODULE=on
 GOPROXY=direct

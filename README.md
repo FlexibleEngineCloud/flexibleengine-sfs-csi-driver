@@ -1,3 +1,5 @@
+# **Version used only for TESTING, see https://github.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver**
+
 # SFS CSI Driver for Kubernetes
 SFS Container Storage Interface (CSI) Plugin makes it possible to use [SFS](https://docs.prod-cloud-ocb.orange-business.com/en-us/sfs/index.html) with your self-built Kubernetes cluster on Flexible Engine
 
@@ -7,19 +9,19 @@ SFS Container Storage Interface (CSI) Plugin makes it possible to use [SFS](http
 ### Install SFS CSI driver
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/rbac-csi-sfs-controller.yaml
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/rbac-csi-sfs-node.yaml
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/csi-sfs-controller.yaml
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/csi-sfs-node.yaml
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/csi-sfs-driver.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/rbac-csi-sfs-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/rbac-csi-sfs-node.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/csi-sfs-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/csi-sfs-node.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/deploy/sfs-csi-plugin/kubernetes/csi-sfs-driver.yaml
 ```
 
 ### Examples
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/examples/sfs-csi-plugin/kubernetes/sc.yaml
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/examples/sfs-csi-plugin/kubernetes/pvc.yaml
-kubectl apply -f https://raw.githubusercontent.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver/master/examples/sfs-csi-plugin/kubernetes/pod.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/examples/sfs-csi-plugin/kubernetes/sc.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/examples/sfs-csi-plugin/kubernetes/pvc.yaml
+kubectl apply -f https://raw.githubusercontent.com/Hasardine/flexibleengine-sfs-csi-driver/master/examples/sfs-csi-plugin/kubernetes/pod.yaml
 ```
 
 ### Links
