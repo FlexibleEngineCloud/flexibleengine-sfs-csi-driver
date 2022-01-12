@@ -28,7 +28,8 @@ spec:
           args:
             - "-v=5"
             - "--csi-address=$(ADDRESS)"
-            - "--leader-election"
+            - "--enable-leader-election"
+            - "--leader-election-type=leases"
           env:
             - name: ADDRESS
               value: /csi/csi.sock
