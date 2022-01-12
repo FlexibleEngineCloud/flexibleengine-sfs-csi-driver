@@ -17,6 +17,8 @@ PKG=github.com/Hasardine/flexibleengine-sfs-csi-driver
 GO111MODULE=on
 GOPROXY=direct
 
+# Move the file from master to /cmd/sfs-csi-plugin
+
 .EXPORT_ALL_VARIABLES:
 
 .PHONY: sfs
@@ -25,8 +27,7 @@ sfs:
 
 .PHONY: sfs-image
 sfs-image:sfs
-	mv ./sfs-csi-plugin ./cmd/sfs-csi-plugin
-	docker build cmd/sfs-csi-plugin -t sfs-csi-plugin-bjm .
+	docker build cmd/sfs-csi-plugin -t sfs-csi-plugin
 
 .PHONY: fmt
 fmt:
