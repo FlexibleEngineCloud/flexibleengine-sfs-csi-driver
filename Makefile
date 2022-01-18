@@ -19,6 +19,8 @@ GO111MODULE=on
 GOPROXY=direct
 
 # Move the file from master to /cmd/sfs-csi-plugin
+# docker buildx build --platform=linux/amd64 cmd/sfs-csi-plugin -t sfs-csi-plugin
+#first docker build cmd/sfs-csi-plugin -t sfs-csi-plugin
 
 .EXPORT_ALL_VARIABLES:
 
@@ -28,7 +30,8 @@ sfs:
 
 .PHONY: sfs-image
 sfs-image:sfs
-	docker build cmd/sfs-csi-plugin -t sfs-csi-plugin
+
+	docker buildx build --platform=linux/amd64 cmd/sfs-csi-plugin -t sfs-csi-plugin
 
 .PHONY: fmt
 fmt:
