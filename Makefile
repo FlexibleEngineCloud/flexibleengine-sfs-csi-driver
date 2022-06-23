@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2019 The Kubernetes Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,10 +13,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PKG=github.com/FlexibleEngineCloud/flexibleengine-sfs-csi-driver
+PKG=github.com/Hasardine/flexibleengine-sfs-csi-driver
 
 GO111MODULE=on
 GOPROXY=direct
+
+# Move the file from master to /cmd/sfs-csi-plugin
+# docker buildx build --platform=linux/amd64 cmd/sfs-csi-plugin -t sfs-csi-plugin
+#first docker build cmd/sfs-csi-plugin -t sfs-csi-plugin
 
 .EXPORT_ALL_VARIABLES:
 
@@ -25,8 +30,10 @@ sfs:
 
 .PHONY: sfs-image
 sfs-image:sfs
+
 	mv ./sfs-csi-plugin ./cmd/sfs-csi-plugin
 	docker build cmd/sfs-csi-plugin -t registry.eu-west-0.prod-cloud-ocb.orange-business.com/official/sfs-csi-plugin:v1.3.2
+
 
 .PHONY: fmt
 fmt:
